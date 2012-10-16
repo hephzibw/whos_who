@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController<ZBarReaderDelegate>
+- (IBAction)scanPressed:(id)sender;
+- (UIViewController *)prepareQrCodeReader;
+- (NSString *)getScannedCode:(NSDictionary *)info;
 
 @end
