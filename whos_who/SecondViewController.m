@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self scanAgain:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,14 +60,14 @@
     
     [picker dismissModalViewControllerAnimated:YES];
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:scannedCode message:scannedCode delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-    [alertView show];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:scannedCode]]];
+    [self.webView reload];
 }
 
-- (IBAction)scanPressed:(id)sender {
+
+
+- (IBAction)scanAgain:(id)sender {
     UIViewController * reader = [self prepareQrCodeReader];
     [self presentModalViewController:reader animated:YES];
 }
-
-
 @end

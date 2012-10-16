@@ -10,8 +10,9 @@
 #import "ZBarSDK.h"
 
 @interface SecondViewController : UIViewController<ZBarReaderDelegate>
-- (IBAction)scanPressed:(id)sender;
 - (UIViewController *)prepareQrCodeReader;
 - (NSString *)getScannedCode:(NSDictionary *)info;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)scanAgain:(id)sender;
 
 @end

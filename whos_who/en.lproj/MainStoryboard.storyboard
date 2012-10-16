@@ -50,9 +50,12 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6W-lX-TYy">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-J1-IFl">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYM-RY-MVN">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Scan Code">
+                                <state key="normal" title="Scan Again">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,21 +63,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="scanPressed:" destination="3" eventType="touchUpInside" id="oD9-iH-D90"/>
+                                    <action selector="scanAgain:" destination="3" eventType="touchUpInside" id="MU9-Yw-h4n"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y6W-lX-TYy" firstAttribute="top" secondItem="17" secondAttribute="top" constant="77" id="1gH-ov-dqd"/>
-                            <constraint firstItem="y6W-lX-TYy" firstAttribute="centerX" secondItem="17" secondAttribute="centerX" type="default" id="B3V-Lq-c1k"/>
+                            <constraint firstItem="PYM-RY-MVN" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="1hs-51-VNZ"/>
+                            <constraint firstItem="xpN-J1-IFl" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="6j0-LJ-ybf"/>
+                            <constraint firstItem="xpN-J1-IFl" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="Jff-F0-tpL"/>
+                            <constraint firstItem="xpN-J1-IFl" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="TLS-iq-hA0"/>
+                            <constraint firstItem="xpN-J1-IFl" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="UEu-7m-ctQ"/>
+                            <constraint firstItem="PYM-RY-MVN" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="sZg-Qf-dx5"/>
+                            <constraint firstItem="PYM-RY-MVN" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="vvp-08-5cE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <connections>
+                        <outlet property="webView" destination="xpN-J1-IFl" id="GIa-yQ-iWC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="653" y="575"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -110,7 +121,8 @@
         <class className="SecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
             <relationships>
-                <relationship kind="action" name="scanPressed:"/>
+                <relationship kind="outlet" name="scanAgain" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>
