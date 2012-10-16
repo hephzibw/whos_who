@@ -13,7 +13,7 @@
 @end
 
 @implementation SecondViewController
-
+@synthesize webView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
