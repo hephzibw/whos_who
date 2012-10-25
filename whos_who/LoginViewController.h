@@ -11,6 +11,7 @@
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UILabel *borderLabel;
 - (IBAction)signIn:(id)sender;
 - (IBAction)animate:(id)sender;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;

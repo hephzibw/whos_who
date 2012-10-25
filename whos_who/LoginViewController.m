@@ -27,7 +27,10 @@
 {
     [super viewDidLoad];
     [self.password setSecureTextEntry:true];
-    //self.fieldContainer.layer.cornerRadius = 5.0;
+    self.username.layer.cornerRadius = 10.0f;
+    self.password.layer.cornerRadius = 10.0f;
+    self.borderLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    self.borderLabel.layer.borderWidth = 1.0;
 	// Do any additional setup after loading the view.
 }
 
