@@ -130,7 +130,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3T8-7I-ykT"/>
-                                    <constraint firstAttribute="width" constant="230" id="IQg-oo-2Dv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -155,19 +154,20 @@
                         <color key="backgroundColor" white="0.35250342153284669" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XPC-Xg-a3i" firstAttribute="centerX" secondItem="o9v-TV-L0f" secondAttribute="centerX" type="default" id="3Rp-Cf-WYq"/>
-                            <constraint firstItem="pfA-aQ-uhn" firstAttribute="leading" secondItem="z9M-a6-aMz" secondAttribute="leading" type="default" id="5Ed-zb-ito"/>
                             <constraint firstItem="NJX-7Q-9f1" firstAttribute="top" secondItem="4Ak-fv-CLP" secondAttribute="top" constant="52" id="AAZ-yg-Civ"/>
-                            <constraint firstAttribute="trailing" secondItem="pfA-aQ-uhn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Acf-gO-dB7"/>
-                            <constraint firstItem="NJX-7Q-9f1" firstAttribute="centerX" secondItem="XPC-Xg-a3i" secondAttribute="centerX" type="default" id="EWo-NW-azM"/>
+                            <constraint firstItem="z9M-a6-aMz" firstAttribute="trailing" secondItem="pfA-aQ-uhn" secondAttribute="trailing" type="default" id="FjE-mj-sUk"/>
+                            <constraint firstItem="pfA-aQ-uhn" firstAttribute="trailing" secondItem="NJX-7Q-9f1" secondAttribute="trailing" type="default" id="GkC-OG-x6B"/>
                             <constraint firstItem="XPC-Xg-a3i" firstAttribute="top" secondItem="4Ak-fv-CLP" secondAttribute="top" constant="172" id="HrD-bR-ofb"/>
                             <constraint firstItem="Biz-TQ-WxW" firstAttribute="leading" secondItem="4Ak-fv-CLP" secondAttribute="leading" type="default" id="Kiu-KG-0EY"/>
                             <constraint firstItem="z9M-a6-aMz" firstAttribute="top" secondItem="4Ak-fv-CLP" secondAttribute="top" constant="122" id="OVa-3A-33S"/>
                             <constraint firstItem="pfA-aQ-uhn" firstAttribute="top" secondItem="4Ak-fv-CLP" secondAttribute="top" constant="83" id="VSI-1o-cyb"/>
                             <constraint firstItem="NJX-7Q-9f1" firstAttribute="centerX" secondItem="Biz-TQ-WxW" secondAttribute="centerX" type="default" id="Zfx-nF-jXr"/>
+                            <constraint firstItem="pfA-aQ-uhn" firstAttribute="leading" secondItem="NJX-7Q-9f1" secondAttribute="leading" type="default" id="ez8-cP-5wJ"/>
+                            <constraint firstItem="pfA-aQ-uhn" firstAttribute="leading" secondItem="z9M-a6-aMz" secondAttribute="leading" type="default" id="iBW-my-DnT"/>
                             <constraint firstItem="o9v-TV-L0f" firstAttribute="top" secondItem="XPC-Xg-a3i" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lkc-kW-ibd"/>
                             <constraint firstItem="Biz-TQ-WxW" firstAttribute="trailing" secondItem="4Ak-fv-CLP" secondAttribute="trailing" type="default" id="nNq-5D-cOM"/>
                             <constraint firstItem="Biz-TQ-WxW" firstAttribute="top" secondItem="4Ak-fv-CLP" secondAttribute="top" type="default" id="qge-Ku-NJ3"/>
-                            <constraint firstAttribute="trailing" secondItem="z9M-a6-aMz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wIz-Ou-AP0"/>
+                            <constraint firstItem="XPC-Xg-a3i" firstAttribute="centerX" secondItem="z9M-a6-aMz" secondAttribute="centerX" type="default" id="yfv-ja-87Q"/>
                         </constraints>
                     </view>
                     <connections>
