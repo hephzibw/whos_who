@@ -17,6 +17,7 @@
 		F94EC9A5162DA9D900FB2E0F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A0162DA9D900FB2E0F /* zbar-help.html */; };
 		F94EC9A6162DA9D900FB2E0F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A1162DA9D900FB2E0F /* zbar-helpicons.png */; };
 		F94EC9A7162DA9D900FB2E0F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A2162DA9D900FB2E0F /* zbar-samples.png */; };
+		F9C113B616396CAC00355835 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C113B516396CAC00355835 /* LoginViewController.m */; };
 		FE96AC11162D8F1100DA6891 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC10162D8F1100DA6891 /* UIKit.framework */; };
 		FE96AC13162D8F1100DA6891 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC12162D8F1100DA6891 /* Foundation.framework */; };
 		FE96AC15162D8F1100DA6891 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC14162D8F1100DA6891 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		F94EC9A0162DA9D900FB2E0F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		F94EC9A1162DA9D900FB2E0F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		F94EC9A2162DA9D900FB2E0F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		F9C113B416396CAC00355835 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F9C113B516396CAC00355835 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FE96AC0C162D8F1100DA6891 /* whos_who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whos_who.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE96AC10162D8F1100DA6891 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE96AC12162D8F1100DA6891 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -256,6 +259,8 @@
 				FE96AC35162D8F1100DA6891 /* second.png */,
 				FE96AC37162D8F1100DA6891 /* second@2x.png */,
 				FE96AC17162D8F1100DA6891 /* Supporting Files */,
+				F9C113B416396CAC00355835 /* LoginViewController.h */,
+				F9C113B516396CAC00355835 /* LoginViewController.m */,
 			);
 			path = whos_who;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				FE96AC21162D8F1100DA6891 /* AppDelegate.m in Sources */,
 				FE96AC2D162D8F1100DA6891 /* FirstViewController.m in Sources */,
 				FE96AC34162D8F1100DA6891 /* SecondViewController.m in Sources */,
+				F9C113B616396CAC00355835 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
