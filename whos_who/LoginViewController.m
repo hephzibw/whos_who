@@ -51,8 +51,7 @@
     NSError *err;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     if([response statusCode] == 200) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"aa gaya" message:@"chal gaya" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        [alert show];
+        [self performSegueWithIdentifier:@"loadApp" sender:[self.username text]];
     } else {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid" message:@"Please check username/password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
