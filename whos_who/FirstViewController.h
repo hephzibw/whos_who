@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblRole;
+@property (weak, nonatomic) IBOutlet UIImageView *imgMugshot;
 
 @end
