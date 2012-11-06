@@ -45,9 +45,14 @@
 {
     id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
     ZBarSymbol *symbol = nil;
+    
+
+    
     for(symbol in results)
         break;
     
+    
+
     return symbol.data;
 }
 
@@ -55,12 +60,15 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     NSString *scannedCode = [self getScannedCode:info];
+    NSString *baseUrl = @"http://my.thoughtworks.com/api/core/v2/users/username/";
+    baseUrl= [baseUrl stringByAppendingString:scannedCode];
+    
     
     //scannedImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
     
     [picker dismissModalViewControllerAnimated:YES];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:scannedCode]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:baseUrl]]];
     [self.webView reload];
 }
 
