@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface MyProfileViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblRole;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMugshot;

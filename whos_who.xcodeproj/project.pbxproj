@@ -28,10 +28,10 @@
 		FE96AC25162D8F1100DA6891 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC24162D8F1100DA6891 /* Default@2x.png */; };
 		FE96AC27162D8F1100DA6891 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC26162D8F1100DA6891 /* Default-568h@2x.png */; };
 		FE96AC2A162D8F1100DA6891 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC28162D8F1100DA6891 /* MainStoryboard.storyboard */; };
-		FE96AC2D162D8F1100DA6891 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96AC2C162D8F1100DA6891 /* FirstViewController.m */; };
+		FE96AC2D162D8F1100DA6891 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96AC2C162D8F1100DA6891 /* MyProfileViewController.m */; };
 		FE96AC2F162D8F1100DA6891 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC2E162D8F1100DA6891 /* first.png */; };
 		FE96AC31162D8F1100DA6891 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC30162D8F1100DA6891 /* first@2x.png */; };
-		FE96AC34162D8F1100DA6891 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96AC33162D8F1100DA6891 /* SecondViewController.m */; };
+		FE96AC34162D8F1100DA6891 /* WhosWhoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96AC33162D8F1100DA6891 /* WhosWhoViewController.m */; };
 		FE96AC36162D8F1100DA6891 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC35162D8F1100DA6891 /* second.png */; };
 		FE96AC38162D8F1100DA6891 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE96AC37162D8F1100DA6891 /* second@2x.png */; };
 		FE96AC40162D8F1100DA6891 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC3F162D8F1100DA6891 /* SenTestingKit.framework */; };
@@ -98,12 +98,12 @@
 		FE96AC24162D8F1100DA6891 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FE96AC26162D8F1100DA6891 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FE96AC29162D8F1100DA6891 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FE96AC2B162D8F1100DA6891 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FE96AC2C162D8F1100DA6891 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FE96AC2B162D8F1100DA6891 /* MyProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		FE96AC2C162D8F1100DA6891 /* MyProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		FE96AC2E162D8F1100DA6891 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		FE96AC30162D8F1100DA6891 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		FE96AC32162D8F1100DA6891 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FE96AC33162D8F1100DA6891 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FE96AC32162D8F1100DA6891 /* WhosWhoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhosWhoViewController.h; sourceTree = "<group>"; };
+		FE96AC33162D8F1100DA6891 /* WhosWhoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhosWhoViewController.m; sourceTree = "<group>"; };
 		FE96AC35162D8F1100DA6891 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		FE96AC37162D8F1100DA6891 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		FE96AC3E162D8F1100DA6891 /* whos_whoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whos_whoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,12 +250,12 @@
 				FE96AC1F162D8F1100DA6891 /* AppDelegate.h */,
 				FE96AC20162D8F1100DA6891 /* AppDelegate.m */,
 				FE96AC28162D8F1100DA6891 /* MainStoryboard.storyboard */,
-				FE96AC2B162D8F1100DA6891 /* FirstViewController.h */,
-				FE96AC2C162D8F1100DA6891 /* FirstViewController.m */,
+				FE96AC2B162D8F1100DA6891 /* MyProfileViewController.h */,
+				FE96AC2C162D8F1100DA6891 /* MyProfileViewController.m */,
 				FE96AC2E162D8F1100DA6891 /* first.png */,
 				FE96AC30162D8F1100DA6891 /* first@2x.png */,
-				FE96AC32162D8F1100DA6891 /* SecondViewController.h */,
-				FE96AC33162D8F1100DA6891 /* SecondViewController.m */,
+				FE96AC32162D8F1100DA6891 /* WhosWhoViewController.h */,
+				FE96AC33162D8F1100DA6891 /* WhosWhoViewController.m */,
 				FE96AC35162D8F1100DA6891 /* second.png */,
 				FE96AC37162D8F1100DA6891 /* second@2x.png */,
 				FE96AC17162D8F1100DA6891 /* Supporting Files */,
@@ -418,8 +418,8 @@
 			files = (
 				FE96AC1D162D8F1100DA6891 /* main.m in Sources */,
 				FE96AC21162D8F1100DA6891 /* AppDelegate.m in Sources */,
-				FE96AC2D162D8F1100DA6891 /* FirstViewController.m in Sources */,
-				FE96AC34162D8F1100DA6891 /* SecondViewController.m in Sources */,
+				FE96AC2D162D8F1100DA6891 /* MyProfileViewController.m in Sources */,
+				FE96AC34162D8F1100DA6891 /* WhosWhoViewController.m in Sources */,
 				F9C113B616396CAC00355835 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

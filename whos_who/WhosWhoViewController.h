@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ZBarSDK.h"
 
-@interface SecondViewController : UIViewController<ZBarReaderDelegate>
+@interface WhosWhoViewController : UIViewController<ZBarReaderDelegate>
 - (UIViewController *)prepareQrCodeReader;
 - (NSString *)getScannedCode:(NSDictionary *)info;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;

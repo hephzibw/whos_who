@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Hephzibah. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "MyProfileViewController.h"
 
-@interface FirstViewController ()
+@interface MyProfileViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation MyProfileViewController
 
 @synthesize lblName = _lblName;
 @synthesize lblRole = _lblRole;

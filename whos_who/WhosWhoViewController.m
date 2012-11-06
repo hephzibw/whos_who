@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Hephzibah. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "WhosWhoViewController.h"
 
-@interface SecondViewController ()
+@interface WhosWhoViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation WhosWhoViewController
 @synthesize webView;
 - (void)viewDidLoad
 {
