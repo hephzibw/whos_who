@@ -103,5 +103,16 @@
     [self presentModalViewController:reader animated:YES];
 }
 - (IBAction)btnSaveContact:(id)sender {
+    [AppDelegate addContactName:_lblName.text email:_lblEmail.text phone:_lblPhone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugShot.image)]];
+}
+
+- (IBAction)signOut:(id)sender {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://my.thoughtworks.com/api/core/v2/authentication/login"]];
+    [request setHTTPMethod:@"DELETE"];
+    NSHTTPURLResponse *response;
+    NSError *err;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    [response statusCode];
+
 }
 @end

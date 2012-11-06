@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="-201"/>
+            <point key="canvasLocation" x="465" y="-765"/>
         </scene>
         <!--Whos Who View Controller - Second-->
         <scene sceneID="13">
@@ -222,7 +222,7 @@
                                     <navigationItem title="Who's Who" id="t1U-Wc-0yv">
                                         <barButtonItem key="rightBarButtonItem" title="Sign out" id="76O-Ce-wgz">
                                             <connections>
-                                                <action selector="signOut:" destination="2" id="5r6-YW-6Ok"/>
+                                                <action selector="signOut:" destination="3" id="o5m-EL-C0A"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -250,6 +250,7 @@
                         <outlet property="lblName" destination="jlW-ud-2nk" id="kwm-pk-haD"/>
                         <outlet property="lblPhone" destination="g7z-jo-6zW" id="nX6-2u-XRM"/>
                         <outlet property="lblRole" destination="QZS-eV-CWi" id="3ZD-p9-gHJ"/>
+                        <segue destination="92q-z7-oXB" kind="modal" id="SF2-5B-eOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
@@ -418,6 +419,7 @@
             <relationships>
                 <relationship kind="action" name="btnSaveContact:"/>
                 <relationship kind="action" name="scanAgain:"/>
+                <relationship kind="action" name="signOut:"/>
                 <relationship kind="outlet" name="imgMugShot" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lblEmail" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
@@ -431,4 +433,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="SF2-5B-eOZ"/>
+    </inferredMetricsTieBreakers>
 </document>

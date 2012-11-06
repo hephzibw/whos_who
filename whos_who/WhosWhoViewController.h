@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 @property (weak, nonatomic) IBOutlet UILabel *lblPhone;
 - (IBAction)btnSaveContact:(id)sender;
+- (IBAction)signOut:(id)sender;
 
 
 @end
