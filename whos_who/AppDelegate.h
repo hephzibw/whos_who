@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (id) jsonFromUrl:(NSString *)url;
+
 @end

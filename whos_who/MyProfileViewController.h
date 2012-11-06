@@ -11,6 +11,9 @@
 @interface MyProfileViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblRole;
+@property (weak, nonatomic) IBOutlet UILabel *email;
+@property (weak, nonatomic) IBOutlet UILabel *phone;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMugshot;
+- (IBAction)signOut:(id)sender;
 
 @end

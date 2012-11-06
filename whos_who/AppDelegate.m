@@ -43,4 +43,22 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (id) jsonFromUrl:(NSString *)url
+{
+    NSURL *profileURL=[[NSURL alloc] initWithString:url];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:profileURL];
+    NSHTTPURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&err ];
+    if(err == nil) {
+        if(response.statusCode == 200) {
+            NSString *output = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+            //strip out useless stuff from json
+            output = [output stringByReplacingOccurrencesOfString:@"throw 'allowIllegalResourceCall is false.';" withString:@""];
+            return [NSJSONSerialization JSONObjectWithData:[[NSMutableData alloc] initWithBytes:[output UTF8String] length:output.length] options:NSJSONReadingMutableLeaves error:&err] ;
+        }
+    }
+    return nil;
+}
+
 @end
