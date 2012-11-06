@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="92q-z7-oXB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tCp-zC-uf5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
@@ -82,6 +82,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
+        </scene>
+        <!--Key People View Controller-->
+        <scene sceneID="4u7-KO-5MF">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="tCp-zC-uf5" customClass="KeyPeopleViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="QOH-Yi-kb0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Dn-ME-l5g">
+                            <size key="itemSize" width="246" height="291"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeyPeople" id="ke1-1F-upE" customClass="KeyPeopleViewCell">
+                                <rect key="frame" x="37" y="0.0" width="246" height="291"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="246" height="291"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-sy-e2A">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="b00-hp-5xx"/>
+                                                <constraint firstAttribute="height" constant="30" id="t6d-fE-pfq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68f-EO-EOQ">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="119" id="Aem-C1-F2k"/>
+                                                <constraint firstAttribute="height" constant="49" id="va3-0Z-s9j"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLh-AI-ZEk">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="JAG-eP-mgn"/>
+                                                <constraint firstAttribute="height" constant="32" id="X30-3G-G8q"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEa-EZ-SJs">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="P5u-B0-ZFj"/>
+                                                <constraint firstAttribute="height" constant="35" id="iKW-wP-9Rg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="68f-EO-EOQ" firstAttribute="top" secondItem="ke1-1F-upE" secondAttribute="top" constant="74" id="0jR-1g-7hY"/>
+                                    <constraint firstAttribute="bottom" secondItem="NLh-AI-ZEk" secondAttribute="bottom" constant="94" id="2YJ-ZK-abB"/>
+                                    <constraint firstItem="JO9-sy-e2A" firstAttribute="leading" secondItem="ke1-1F-upE" secondAttribute="leading" constant="92" id="9kD-Zq-DQR"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEa-EZ-SJs" secondAttribute="bottom" constant="20" type="default" id="TX5-GE-oDR"/>
+                                    <constraint firstItem="JO9-sy-e2A" firstAttribute="top" secondItem="ke1-1F-upE" secondAttribute="top" constant="14" id="eNQ-3y-HNJ"/>
+                                    <constraint firstItem="NLh-AI-ZEk" firstAttribute="leading" secondItem="ke1-1F-upE" secondAttribute="leading" constant="55" id="lOo-yg-B2P"/>
+                                    <constraint firstItem="68f-EO-EOQ" firstAttribute="leading" secondItem="ke1-1F-upE" secondAttribute="leading" constant="112" id="qgq-nG-7EC"/>
+                                    <constraint firstItem="JEa-EZ-SJs" firstAttribute="leading" secondItem="JO9-sy-e2A" secondAttribute="leading" type="default" id="tNv-QC-hyR"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tCp-zC-uf5" id="bcb-Nr-UWn"/>
+                            <outlet property="delegate" destination="tCp-zC-uf5" id="1xW-9w-LRh"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="keyPersonEmail" destination="NLh-AI-ZEk" id="Uo3-uV-BYd"/>
+                        <outlet property="keyPersonMobile" destination="JEa-EZ-SJs" id="dxC-7u-qcD"/>
+                        <outlet property="keyPersonName" destination="68f-EO-EOQ" id="Yxz-S5-yWB"/>
+                        <outlet property="keyPersonType" destination="JO9-sy-e2A" id="8Jo-ID-yOj"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hw-gE-mX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="575"/>
         </scene>
         <!--Whos Who View Controller - Second-->
         <scene sceneID="13">
@@ -259,6 +347,18 @@
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="KeyPeopleViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewCell.h"/>
+        </class>
+        <class className="KeyPeopleViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="keyPersonEmail" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="keyPersonMobile" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="keyPersonName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="keyPersonType" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
@@ -280,6 +380,21 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="WhosWhoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WhosWhoViewController.h"/>
