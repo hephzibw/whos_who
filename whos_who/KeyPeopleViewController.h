@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KeyPeopleViewCell.h"
 
 @interface KeyPeopleViewController : UICollectionViewController
-@property (weak, nonatomic) IBOutlet UILabel *keyPersonType;
-@property (weak, nonatomic) IBOutlet UILabel *keyPersonName;
-@property (weak, nonatomic) IBOutlet UILabel *keyPersonEmail;
-@property (weak, nonatomic) IBOutlet UILabel *keyPersonMobile;
+<UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray *people;
 
 @end

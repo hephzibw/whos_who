@@ -97,7 +97,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeyPeople" id="ke1-1F-upE" customClass="KeyPeopleViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeyPeopleCell" id="ke1-1F-upE" customClass="KeyPeopleViewCell">
                                 <rect key="frame" x="37" y="0.0" width="246" height="291"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -153,6 +153,12 @@
                                     <constraint firstItem="68f-EO-EOQ" firstAttribute="leading" secondItem="ke1-1F-upE" secondAttribute="leading" constant="112" id="qgq-nG-7EC"/>
                                     <constraint firstItem="JEa-EZ-SJs" firstAttribute="leading" secondItem="JO9-sy-e2A" secondAttribute="leading" type="default" id="tNv-QC-hyR"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="emailKeyPerson" destination="JEa-EZ-SJs" id="VXs-5y-wR0"/>
+                                    <outlet property="mobileKeyPerson" destination="NLh-AI-ZEk" id="lnT-4J-LYz"/>
+                                    <outlet property="nameKeyPerson" destination="68f-EO-EOQ" id="93T-80-Y37"/>
+                                    <outlet property="typeKeyPerson" destination="JO9-sy-e2A" id="xp6-AH-q56"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -160,12 +166,6 @@
                             <outlet property="delegate" destination="tCp-zC-uf5" id="1xW-9w-LRh"/>
                         </connections>
                     </collectionView>
-                    <connections>
-                        <outlet property="keyPersonEmail" destination="NLh-AI-ZEk" id="Uo3-uV-BYd"/>
-                        <outlet property="keyPersonMobile" destination="JEa-EZ-SJs" id="dxC-7u-qcD"/>
-                        <outlet property="keyPersonName" destination="68f-EO-EOQ" id="Yxz-S5-yWB"/>
-                        <outlet property="keyPersonType" destination="JO9-sy-e2A" id="8Jo-ID-yOj"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hw-gE-mX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,64 +346,6 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="KeyPeopleViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewCell.h"/>
-        </class>
-        <class className="KeyPeopleViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="keyPersonEmail" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="keyPersonMobile" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="keyPersonName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="keyPersonType" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="animate:"/>
-                <relationship kind="action" name="signIn:"/>
-                <relationship kind="outlet" name="borderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MyProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyProfileViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imgMugshot" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblRole" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="WhosWhoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhosWhoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="scanAgain:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
