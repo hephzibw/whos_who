@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AddressBook/AddressBook.h>
 
 @implementation AppDelegate
 
@@ -61,8 +62,29 @@
     return nil;
 }
 
-+ (bool) addContactFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email phone:(NSString *)phone
++ (bool) addContactName:(NSString *)name email:(NSString *)email phone:(NSString *)phone photo:(NSData *)photo
 {
-    
+    CFErrorRef err = nil;
+    ABAddressBookRef bookRef = ABAddressBookCreateWithOptions(NULL, nil);
+    if(err == nil) {
+        ABRecordRef person = ABPersonCreate();
+        // firstname
+        ABRecordSetValue(person, kABPersonFirstNameProperty,(__bridge CFStringRef)name, NULL);
+        ABMutableMultiValueRef phoneNumberMultiValue =
+        ABMultiValueCreateMutable(kABPersonPhoneProperty);
+        ABMultiValueAddValueAndLabel(phoneNumberMultiValue ,(__bridge CFStringRef)phone,kABPersonPhoneMobileLabel, NULL);
+        ABPersonSetImageData(person, (__bridge CFDataRef)photo, NULL);
+        ABRecordSetValue(person, kABPersonPhoneProperty, phoneNumberMultiValue, NULL);
+        // email
+        ABMutableMultiValueRef emailVal = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+        ABMultiValueAddValueAndLabel(emailVal, (__bridge CFStringRef)email, CFSTR("email"), NULL);
+        ABRecordSetValue(person, kABPersonEmailProperty, emailVal, &err);
+        CFRelease(emailVal);
+        ABAddressBookAddRecord(bookRef, person, &err);
+        bool resp = ABAddressBookSave(bookRef, nil); //save the record
+        CFRelease(person);
+        return resp;
+    }
+    return false;
 }
 @end

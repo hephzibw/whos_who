@@ -57,4 +57,8 @@ NSString *username;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     [response statusCode];
 }
+
+- (IBAction)addToContacts:(id)sender {
+    [AppDelegate addContactFirstName:_lblName.text lastName:@"Garg" email:_email.text phone:_phone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugshot.image)]];
+}
 @end
