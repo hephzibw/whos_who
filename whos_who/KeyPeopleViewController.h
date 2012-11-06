@@ -11,7 +11,6 @@
 
 @interface KeyPeopleViewController : UICollectionViewController
 <UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (strong, nonatomic) NSMutableArray *people;
-
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (strong, nonatomic) NSDictionary *people;
 @end
