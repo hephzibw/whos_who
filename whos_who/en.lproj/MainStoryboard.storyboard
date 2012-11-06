@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="92q-z7-oXB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="92q-z7-oXB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
@@ -86,9 +86,9 @@
                             <constraint firstAttribute="bottom" secondItem="vsf-Yv-0tW" secondAttribute="bottom" constant="26" id="GMu-WM-dZl"/>
                             <constraint firstItem="vsf-Yv-0tW" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HGj-ki-KTC"/>
                             <constraint firstItem="lsd-sV-7rC" firstAttribute="trailing" secondItem="5wE-zq-knR" secondAttribute="trailing" type="default" id="Jn4-kM-g1h"/>
-                            <constraint firstItem="ggH-Hn-Otf" firstAttribute="top" secondItem="5JX-pI-WSx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KJP-ut-B43"/>
-                            <constraint firstItem="vsf-Yv-0tW" firstAttribute="top" secondItem="ggH-Hn-Otf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MQ4-g3-bH1"/>
+                            <constraint firstAttribute="bottom" secondItem="ggH-Hn-Otf" secondAttribute="bottom" constant="84" id="MFS-3v-G0Z"/>
                             <constraint firstItem="HWz-WD-wDL" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="NKK-7s-hzC"/>
+                            <constraint firstAttribute="bottom" secondItem="5JX-pI-WSx" secondAttribute="bottom" constant="106" id="Rjf-uh-ARp"/>
                             <constraint firstItem="5wE-zq-knR" firstAttribute="top" secondItem="16" secondAttribute="top" constant="244" id="Ugb-8i-cNg"/>
                             <constraint firstItem="lsd-sV-7rC" firstAttribute="top" secondItem="16" secondAttribute="top" constant="205" id="ZIO-jr-NbJ"/>
                             <constraint firstItem="5JX-pI-WSx" firstAttribute="trailing" secondItem="5wE-zq-knR" secondAttribute="trailing" type="default" id="fhM-9s-B8U"/>
@@ -376,6 +376,18 @@
         <image name="second" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="KeyPeopleViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="emailKeyPerson" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mobileKeyPerson" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameKeyPerson" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="typeKeyPerson" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="KeyPeopleViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewController.h"/>
+        </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
@@ -400,6 +412,28 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+        <class className="WhosWhoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhosWhoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="scanAgain:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
