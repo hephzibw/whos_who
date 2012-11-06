@@ -7,13 +7,19 @@
 //
 
 #import "WhosWhoViewController.h"
+#import "AppDelegate.h"
 
 @interface WhosWhoViewController ()
 
 @end
 
 @implementation WhosWhoViewController
-@synthesize webView;
+@synthesize imgMugShot = _imgMugShot;
+@synthesize lblEmail = _lblEmail;
+@synthesize lblName = _lblName;
+@synthesize lblPhone = _lblPhone;
+@synthesize lblRole = _lblRole;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,8 +56,6 @@
     
     for(symbol in results)
         break;
-    
-    
 
     return symbol.data;
 }
@@ -60,16 +64,36 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     NSString *scannedCode = [self getScannedCode:info];
-    NSString *baseUrl = @"http://my.thoughtworks.com/api/core/v2/users/username/";
+   NSString *baseUrl = @"http://my.thoughtworks.com/api/core/v2/users/username/";
+    //NSString *baseUrl = @"https://my.thoughtworks.com/people/";
+    
     baseUrl= [baseUrl stringByAppendingString:scannedCode];
+    NSDictionary *data = [AppDelegate jsonFromUrl:baseUrl];
+    
+    if(data != nil) {
+        _lblName.text = [data objectForKey:@"name"];
+        _lblRole.text = [[data objectForKey:@"profile"] objectForKey:@"title"];
+        NSString *urlOfImage = @"https://my.thoughtworks.com/5.0.2/images/jive-profile-default-portrait.png";
+        NSArray *imageData = [AppDelegate jsonFromUrl:[[[data objectForKey:@"resources"] objectForKey:@"images"] objectForKey:@"ref"]];
+        if([imageData count] > 0) {
+            urlOfImage = [[imageData objectAtIndex:0] objectForKey:@"ref"];
+        }
+        NSURL *url = [NSURL URLWithString: urlOfImage];
+        UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+        [_imgMugShot setImage:image];
+        _lblPhone.text = [[data objectForKey:@"profile"] objectForKey:@"mobile"];
+        _lblEmail.text = [data objectForKey:@"email"];
+    }
+
+    
     
     
     //scannedImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
     
     [picker dismissModalViewControllerAnimated:YES];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:baseUrl]]];
-    [self.webView reload];
+    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:baseUrl]]];
+    //[self.webView reload];
 }
 
 
@@ -77,5 +101,7 @@
 - (IBAction)scanAgain:(id)sender {
     UIViewController * reader = [self prepareQrCodeReader];
     [self presentModalViewController:reader animated:YES];
+}
+- (IBAction)btnSaveContact:(id)sender {
 }
 @end
