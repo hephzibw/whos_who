@@ -59,6 +59,6 @@ NSString *username;
 }
 
 - (IBAction)addToContacts:(id)sender {
-    [AppDelegate addContactFirstName:_lblName.text lastName:@"Garg" email:_email.text phone:_phone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugshot.image)]];
+    [AppDelegate addContactName:_lblName.text email:_email.text phone:_phone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugshot.image)]];
 }
 @end
