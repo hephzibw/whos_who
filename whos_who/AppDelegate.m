@@ -61,4 +61,8 @@
     return nil;
 }
 
++ (bool) addContactFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email phone:(NSString *)phone
+{
+    
+}
 @end

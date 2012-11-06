@@ -19,6 +19,7 @@
 		F94EC9A5162DA9D900FB2E0F /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A0162DA9D900FB2E0F /* zbar-help.html */; };
 		F94EC9A6162DA9D900FB2E0F /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A1162DA9D900FB2E0F /* zbar-helpicons.png */; };
 		F94EC9A7162DA9D900FB2E0F /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EC9A2162DA9D900FB2E0F /* zbar-samples.png */; };
+		F9A19D87164953F7001453B5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A19D86164953F7001453B5 /* AddressBook.framework */; };
 		F9C113B616396CAC00355835 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C113B516396CAC00355835 /* LoginViewController.m */; };
 		FE96AC11162D8F1100DA6891 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC10162D8F1100DA6891 /* UIKit.framework */; };
 		FE96AC13162D8F1100DA6891 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE96AC12162D8F1100DA6891 /* Foundation.framework */; };
@@ -88,6 +89,7 @@
 		F94EC9A0162DA9D900FB2E0F /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		F94EC9A1162DA9D900FB2E0F /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		F94EC9A2162DA9D900FB2E0F /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		F9A19D86164953F7001453B5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F9C113B416396CAC00355835 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F9C113B516396CAC00355835 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FE96AC0C162D8F1100DA6891 /* whos_who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whos_who.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A19D87164953F7001453B5 /* AddressBook.framework in Frameworks */,
 				F94EC97B162D9D7D00FB2E0F /* libiconv.dylib in Frameworks */,
 				F94EC979162D9D6900FB2E0F /* QuartzCore.framework in Frameworks */,
 				F94EC977162D9D5900FB2E0F /* CoreVideo.framework in Frameworks */,
@@ -217,6 +220,7 @@
 		FE96AC01162D8F1100DA6891 = {
 			isa = PBXGroup;
 			children = (
+				F9A19D86164953F7001453B5 /* AddressBook.framework */,
 				F94EC97A162D9D7D00FB2E0F /* libiconv.dylib */,
 				F94EC978162D9D6900FB2E0F /* QuartzCore.framework */,
 				F94EC976162D9D5900FB2E0F /* CoreVideo.framework */,
