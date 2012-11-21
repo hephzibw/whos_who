@@ -7,14 +7,13 @@
 //
 
 #import "KeyPeopleViewController.h"
+#import "AppDelegate.h"
 
 @interface KeyPeopleViewController ()
 
 @end
 
 @implementation KeyPeopleViewController
-
-@synthesize responseData = _responseData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,26 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSLog(@"didReceiveResponse");
-    [self.responseData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self.responseData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"didFailWithError");
-    NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSError *myError = nil;
-    _people = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myError];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,11 +43,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    self.responseData = [NSMutableData data];
-    NSURLRequest *request = [NSURLRequest requestWithURL:
-                             [NSURL URLWithString:@"http://glacial-inlet-5350.herokuapp.com/people"]];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
-
+    _people = [AppDelegate jsonFromUrl:@"http://glacial-inlet-5350.herokuapp.com/people"];
     return _people.count;
 }
 
@@ -80,7 +55,11 @@
                                     forIndexPath:indexPath];
     int row = [indexPath row];
     
-    myCell.typeKeyPerson.text = @"hello";
+    myCell.typeKeyPerson.text = [_people[row] objectForKey:@"role"];
+    myCell.nameKeyPerson.text = [_people[row] objectForKey:@"name"];
+    myCell.emailKeyPerson.text = [_people[row] objectForKey:@"email"];
+    myCell.mobileKeyPerson.text = [_people[row] objectForKey:@"mobile"];
+    
     return myCell;
 }
 
