@@ -51,12 +51,8 @@
 {
     id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
     ZBarSymbol *symbol = nil;
-    
-
-    
     for(symbol in results)
         break;
-
     return symbol.data;
 }
 
@@ -64,8 +60,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     NSString *scannedCode = [self getScannedCode:info];
-   NSString *baseUrl = @"http://my.thoughtworks.com/api/core/v2/users/username/";
-    //NSString *baseUrl = @"https://my.thoughtworks.com/people/";
+    NSString *baseUrl = @"http://my.thoughtworks.com/api/core/v2/users/username/";
     
     baseUrl= [baseUrl stringByAppendingString:scannedCode];
     NSDictionary *data = [AppDelegate jsonFromUrl:baseUrl];
@@ -84,23 +79,15 @@
         _lblPhone.text = [[data objectForKey:@"profile"] objectForKey:@"mobile"];
         _lblEmail.text = [data objectForKey:@"email"];
     }
-
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
-    
-    
-    //scannedImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
-    
-    [picker dismissModalViewControllerAnimated:YES];
-    
-    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:baseUrl]]];
-    //[self.webView reload];
 }
 
 
 
 - (IBAction)scanAgain:(id)sender {
     UIViewController * reader = [self prepareQrCodeReader];
-    [self presentModalViewController:reader animated:YES];
+    [self presentViewController:reader animated:YES completion:nil];
 }
 - (IBAction)btnSaveContact:(id)sender {
     [AppDelegate addContactName:_lblName.text email:_lblEmail.text phone:_lblPhone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugShot.image)]];

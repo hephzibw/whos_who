@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UILabel *phone;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMugshot;
+@property (weak, nonatomic) NSString *url;
 - (IBAction)signOut:(id)sender;
 - (IBAction)addToContacts:(id)sender;
 

@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 
 @interface KeyPeopleViewController ()
-
 @end
 
 @implementation KeyPeopleViewController
@@ -63,4 +62,21 @@
     return myCell;
 }
 
+- (IBAction)signOut:(id)sender {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://my.thoughtworks.com/api/core/v2/authentication/login"]];
+    [request setHTTPMethod:@"DELETE"];
+    NSHTTPURLResponse *response;
+    NSError *err;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    [response statusCode];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"details"]) {
+        MyProfileViewController *controller = [segue destinationViewController];
+        controller.url = @"http://my.thoughtworks.com/api/core/v2/users/username/ndhall";
+
+    }
+}
 @end

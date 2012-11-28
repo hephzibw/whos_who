@@ -20,12 +20,16 @@ NSString *username;
 @synthesize imgMugshot = _imgMugshot;
 @synthesize phone = _phone;
 @synthesize email = _email;
+@synthesize url = _url;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSDictionary *data = [AppDelegate jsonFromUrl:@"https://my.thoughtworks.com/api/core/v2/my"];
+    if(_url == nil) {
+        _url = @"https://my.thoughtworks.com/api/core/v2/my";
+    }
+    NSDictionary *data = [AppDelegate jsonFromUrl:_url];
     if(data != nil) {
         _lblName.text = [data objectForKey:@"name"];
         _lblRole.text = [[data objectForKey:@"profile"] objectForKey:@"title"];

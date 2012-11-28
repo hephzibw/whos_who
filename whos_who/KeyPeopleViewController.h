@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "KeyPeopleViewCell.h"
+#import "MyProfileViewController.h"
 
 @interface KeyPeopleViewController : UICollectionViewController
 <UICollectionViewDataSource, UICollectionViewDelegate>
+- (IBAction)signOut:(id)sender;
+
 @property (strong, nonatomic) NSArray *people;
 @end
