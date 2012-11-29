@@ -97,6 +97,8 @@
 		F9542CEB166731C80089658A /* mail_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail_icon@2x.png"; sourceTree = "<group>"; };
 		F9542CEC166731C80089658A /* phone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_icon.png; sourceTree = "<group>"; };
 		F9542CED166731C80089658A /* phone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_icon@2x.png"; sourceTree = "<group>"; };
+		F9567BB7166788F800AE22EC /* jagbirs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jagbirs.png; sourceTree = "<group>"; };
+		F9567BB91667894F00AE22EC /* gurgaon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gurgaon.png; sourceTree = "<group>"; };
 		F9A19D86164953F7001453B5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F9C113B416396CAC00355835 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F9C113B516396CAC00355835 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -318,6 +320,8 @@
 		FE96AC46162D8F1100DA6891 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9567BB91667894F00AE22EC /* gurgaon.png */,
+				F9567BB7166788F800AE22EC /* jagbirs.png */,
 				FE96AC47162D8F1100DA6891 /* whos_whoTests-Info.plist */,
 				FE96AC48162D8F1100DA6891 /* InfoPlist.strings */,
 			);

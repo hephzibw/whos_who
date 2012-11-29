@@ -40,6 +40,12 @@
     return 1;
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    if(baseUrl == nil) {
+        [self.collectionView reloadData];
+    }
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
