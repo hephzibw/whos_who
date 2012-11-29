@@ -13,6 +13,7 @@
 @interface KeyPeopleViewController : UICollectionViewController
 <UICollectionViewDataSource, UICollectionViewDelegate>
 - (IBAction)signOut:(id)sender;
+- (IBAction)handleSegment:(id)sender;
 
 @property (strong, nonatomic) NSArray *people;
 @property (strong, nonatomic) NSString *baseUrl;

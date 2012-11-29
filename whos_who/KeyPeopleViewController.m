@@ -45,26 +45,33 @@
 {
     if(baseUrl != nil) {
         _people = [AppDelegate jsonFromUrl:baseUrl];
+        return _people.count + 1;
     } else {
         _people = [AppDelegate getSavedPeopleInfo];
+        return _people.count;
     }
-    return _people.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    KeyPeopleViewCell *myCell = [collectionView
+    if(baseUrl != nil && [indexPath row] == 0) {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"segments" forIndexPath:indexPath];
+        return cell;
+    } else {
+        int offset = baseUrl == nil? 0 : -1;
+        
+        KeyPeopleViewCell *myCell = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"KeyPeopleCell"
                                     forIndexPath:indexPath];
-    int row = [indexPath row];
+        int row = [indexPath row];
     
-    myCell.typeKeyPerson.text = [_people[row] objectForKey:@"role"];
-    myCell.nameKeyPerson.text = [_people[row] objectForKey:@"name"];
-    myCell.emailKeyPerson.text = [_people[row] objectForKey:@"email"];
-    myCell.mobileKeyPerson.text = [_people[row] objectForKey:@"mobile"];
-    
-    return myCell;
+        myCell.typeKeyPerson.text = [_people[row + offset] objectForKey:@"role"];
+        myCell.nameKeyPerson.text = [_people[row + offset] objectForKey:@"name"];
+        myCell.emailKeyPerson.text = [_people[row + offset] objectForKey:@"email"];
+        myCell.mobileKeyPerson.text = [_people[row + offset] objectForKey:@"mobile"];
+        return myCell;
+    }
 }
 
 - (IBAction)signOut:(id)sender {
@@ -75,6 +82,13 @@
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     [response statusCode];
 
+}
+
+- (IBAction)handleSegment:(id)sender {
+    UISegmentedControl *control = sender;
+    if ([control selectedSegmentIndex] == 0) {
+        [AppDelegate savePeopleInfo:_people];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
