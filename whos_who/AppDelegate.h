@@ -15,4 +15,9 @@
 + (id) jsonFromUrl:(NSString *)url;
 
 + (bool) addContactName:(NSString *)name email:(NSString *)email phone:(NSString *)phone photo:(NSData *)photo;
+
++ (void) savePeopleInfo:(NSArray *)people;
+
++ (NSArray *) getSavedPeopleInfo;
+
 @end

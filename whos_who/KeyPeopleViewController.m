@@ -14,6 +14,7 @@
 
 @implementation KeyPeopleViewController
 
+@synthesize baseUrl;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,7 +43,11 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    _people = [AppDelegate jsonFromUrl:@"http://glacial-inlet-5350.herokuapp.com/people"];
+    if(baseUrl != nil) {
+        _people = [AppDelegate jsonFromUrl:baseUrl];
+    } else {
+        _people = [AppDelegate getSavedPeopleInfo];
+    }
     return _people.count;
 }
 

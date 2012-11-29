@@ -11,6 +11,7 @@
 
 @implementation AppDelegate
 
+NSArray *savedInfo;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -86,5 +87,13 @@
         return resp;
     }
     return false;
+}
+
++ (void) savePeopleInfo:(NSArray *)people {
+    savedInfo = people;
+}
+
++ (NSArray *) getSavedPeopleInfo {
+    return savedInfo;
 }
 @end

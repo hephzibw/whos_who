@@ -15,4 +15,6 @@
 - (IBAction)signOut:(id)sender;
 
 @property (strong, nonatomic) NSArray *people;
+@property (strong, nonatomic) NSString *baseUrl;
+
 @end
