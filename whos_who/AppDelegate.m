@@ -47,6 +47,21 @@ NSArray *savedInfo;
 
 + (id) jsonFromUrl:(NSString *)url
 {
+    if([url hasSuffix:@"/office/gurgaon"]) {
+        NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+        NSArray *keyContacts = [[NSArray alloc] initWithObjects:
+                                [[NSDictionary alloc] initWithObjects:
+                                [[NSArray alloc] initWithObjects:@"ndhall", nil] forKeys:[[NSArray alloc] initWithObjects:@"username", nil]],
+                                [[NSDictionary alloc] initWithObjects:
+                                [[NSArray alloc] initWithObjects:@"mukeshk", nil] forKeys:[[NSArray alloc] initWithObjects:@"username", nil]],
+                                [[NSDictionary alloc] initWithObjects:
+                                 [[NSArray alloc] initWithObjects:@"damandek", nil] forKeys:[[NSArray alloc] initWithObjects:@"username", nil]],
+                                nil];
+        [data setObject:keyContacts forKey:@"key-contacts"];
+        [data setObject:@"twmailggn@gurgaon.com" forKey:@"maillist"];
+        [data setObject:@"230363653644793" forKey:@"fb-page-id"];
+        return data;
+    }
     NSURL *profileURL=[[NSURL alloc] initWithString:url];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:profileURL];
     NSHTTPURLResponse *response;

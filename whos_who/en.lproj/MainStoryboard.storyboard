@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="669"/>
+            <point key="canvasLocation" x="751" y="833"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="vVN-CT-149">
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NS7-qn-Fgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2101" y="472"/>
+            <point key="canvasLocation" x="2439" y="472"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -488,74 +488,6 @@
         <image name="mail_icon.png" width="32" height="32"/>
         <image name="phone_icon.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="KeyPeopleViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="emailKeyPerson" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mobileKeyPerson" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameKeyPerson" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeKeyPerson" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="KeyPeopleViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KeyPeopleViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="handleSegment:"/>
-                <relationship kind="action" name="signOut:"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="animate:"/>
-                <relationship kind="action" name="signIn:"/>
-                <relationship kind="outlet" name="borderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MyProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyProfileViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addToContacts:"/>
-                <relationship kind="action" name="signOut:"/>
-                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imgMugshot" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblRole" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phone" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="WhosWhoViewController" superclassName="ZBarReaderViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WhosWhoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signOut:"/>
-            </relationships>
-        </class>
-        <class className="ZBarReaderView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZBarReaderView.h"/>
-        </class>
-        <class className="ZBarReaderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZBarReaderViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
