@@ -59,7 +59,7 @@
         baseUrl= [@"http://my.thoughtworks.com/api/core/v2/users" stringByAppendingString:scannedCode];
         [self performSegueWithIdentifier:@"person" sender:self];
     } else if([scannedCode hasPrefix:@"/office/"]) {
-        baseUrl = [@"http://glacial-inlet-5350.herokuapp.com/people" stringByAppendingString:scannedCode];
+        baseUrl = [@"http://office-dm.herokuapp.com" stringByAppendingString:scannedCode];
         [self performSegueWithIdentifier:@"office" sender:self];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid code!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];

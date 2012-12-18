@@ -12,6 +12,8 @@
 @interface KeyPeopleViewController ()
 @end
 
+NSString *fbPageId;
+NSString *mailList;
 @implementation KeyPeopleViewController
 
 @synthesize baseUrl;
@@ -50,11 +52,14 @@
     numberOfItemsInSection:(NSInteger)section
 {
     if(baseUrl != nil) {
-        _people = [[AppDelegate jsonFromUrl:baseUrl] objectForKey:@"key-contacts"];
+        NSDictionary *url_data = [AppDelegate jsonFromUrl:baseUrl];
+        fbPageId = [url_data objectForKey:@"fb_page"];
+        mailList = [url_data objectForKey:@"mail_list"];
+        _people = [[url_data objectForKey:@"key_people"] componentsSeparatedByString:@","];
         NSMutableArray *people = [[NSMutableArray alloc] init];
-        for(NSDictionary *object in _people) {
-            NSMutableDictionary *data = [AppDelegate jsonFromUrl:[@"http://my.thoughtworks.com/api/core/v2/users/username/" stringByAppendingString:[object objectForKey:@"username"]]];
-            NSMutableDictionary *details = [[NSMutableDictionary alloc] initWithDictionary:object];
+        for(NSString *username in _people) {
+            NSMutableDictionary *data = [AppDelegate jsonFromUrl:[@"http://my.thoughtworks.com/api/core/v2/users/username/" stringByAppendingString:username]];
+            NSMutableDictionary *details = [[NSMutableDictionary alloc] initWithObjects:[NSArray arrayWithObject:username] forKeys:[NSArray arrayWithObject:@"username"]];
             if([[data objectForKey:@"profile"] objectForKey:@"title"] != nil)
                 [details setObject:[[data objectForKey:@"profile"] objectForKey:@"title"] forKey:@"role"];
             [details setObject:[data objectForKey:@"name"] forKey:@"name"];
@@ -108,6 +113,37 @@
     UISegmentedControl *control = sender;
     if ([control selectedSegmentIndex] == 0) {
         [AppDelegate savePeopleInfo:_people];
+    }
+    else if([control selectedSegmentIndex] == 1) {
+        NSString *markup = @"";
+        for(NSDictionary *values in _people) {
+            markup = [markup stringByAppendingString:[NSString stringWithFormat:@"<h2>%@ | %@</h2><h3>%@</h3><h3>%@</h3><br/<br/>",[values objectForKey:@"role"],[values objectForKey:@"name"],[values objectForKey:@"email"],[values objectForKey:@"mobile"]]];
+        }
+        UIMarkupTextPrintFormatter *formatter = [[UIMarkupTextPrintFormatter alloc] initWithMarkupText:markup];
+        UIPrintInteractionController *pic = [UIPrintInteractionController sharedPrintController];
+        if  (pic) {
+            UIPrintInfo *printInfo = [UIPrintInfo printInfo];
+            printInfo.outputType = UIPrintInfoOutputGeneral;
+            printInfo.jobName = @"Print Office Details";
+            printInfo.duplex = UIPrintInfoDuplexLongEdge;
+            pic.printInfo = printInfo;
+            pic.showsPageRange = YES;
+            void (^completionHandler)(UIPrintInteractionController *, BOOL, NSError *) =
+                ^(UIPrintInteractionController *pic, BOOL completed, NSError *error) {
+                    if (!completed && error)
+                        NSLog(@"FAILED! due to error in domain %@ with error code %u",
+                              error.domain, error.code);
+                };
+            [pic setPrintFormatter:formatter];
+            [pic presentAnimated:true completionHandler:completionHandler];
+        }
+    
+    }
+    else if([control selectedSegmentIndex] == 2) {
+        [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:[@"mailto:" stringByAppendingString:mailList]]];
+    }
+    else if([control selectedSegmentIndex] == 3) {
+        [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:[@"http://www.facebook.com/" stringByAppendingString:fbPageId]]];
     }
 }
 
