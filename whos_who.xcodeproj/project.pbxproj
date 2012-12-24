@@ -566,7 +566,6 @@
 				INFOPLIST_FILE = "whos_who/whos_who-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../i-learning/ZBarSDK\"",
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,7 +581,6 @@
 				INFOPLIST_FILE = "whos_who/whos_who-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../i-learning/ZBarSDK\"",
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

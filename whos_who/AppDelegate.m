@@ -81,7 +81,13 @@ NSArray *savedInfo;
         ABMultiValueAddValueAndLabel(emailVal, (__bridge CFStringRef)email, CFSTR("email"), NULL);
         ABRecordSetValue(person, kABPersonEmailProperty, emailVal, &err);
         CFRelease(emailVal);
-        ABAddressBookAddRecord(bookRef, person, &err);
+        if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {
+            ABAddressBookRequestAccessWithCompletion(bookRef, ^(bool granted, CFErrorRef error) {
+                ABAddressBookAddRecord(bookRef, person, &error);
+            });
+        } else {
+            ABAddressBookAddRecord(bookRef, person, &err);
+        }
         bool resp = ABAddressBookSave(bookRef, nil); //save the record
         CFRelease(person);
         return resp;

@@ -63,6 +63,11 @@ NSString *username;
 }
 
 - (IBAction)addToContacts:(id)sender {
-    [AppDelegate addContactName:_lblName.text email:_email.text phone:_phone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugshot.image)]];
+    bool status = [AppDelegate addContactName:_lblName.text email:_email.text phone:_phone.text photo:[NSData dataWithData:UIImagePNGRepresentation(_imgMugshot.image)]];
+    if(status) {
+        [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Contact Saved!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error occured while saving the contact!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    }
 }
 @end

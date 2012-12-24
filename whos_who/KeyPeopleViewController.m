@@ -113,6 +113,7 @@ NSString *mailList;
     UISegmentedControl *control = sender;
     if ([control selectedSegmentIndex] == 0) {
         [AppDelegate savePeopleInfo:_people];
+        [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Details Saved!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
     }
     else if([control selectedSegmentIndex] == 1) {
         NSString *markup = @"";
