@@ -602,7 +602,7 @@
 				GCC_PREFIX_HEADER = "whos_who/whos_who-Prefix.pch";
 				INFOPLIST_FILE = "whos_whoTests/whos_whoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -619,7 +619,7 @@
 				GCC_PREFIX_HEADER = "whos_who/whos_who-Prefix.pch";
 				INFOPLIST_FILE = "whos_whoTests/whos_whoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
