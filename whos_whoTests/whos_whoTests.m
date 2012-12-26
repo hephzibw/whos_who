@@ -28,7 +28,7 @@
 {
     NSArray *array = [NSArray new];
     [AppDelegate savePeopleInfo:array];
-    assert([AppDelegate getSavedPeopleInfo] == array);
+    STAssertEquals([AppDelegate getSavedPeopleInfo], array, @"Saved data should get retrieved.");
 }
 
 @end
