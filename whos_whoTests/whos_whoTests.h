@@ -7,7 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-
+#import "AppDelegate.h"
 @interface whos_whoTests : SenTestCase
 
 @end

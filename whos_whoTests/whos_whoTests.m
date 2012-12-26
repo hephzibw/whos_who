@@ -24,9 +24,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSaveInfoShouldSaveData
 {
-    assert(true);
+    NSArray *array = [NSArray new];
+    [AppDelegate savePeopleInfo:array];
+    assert([AppDelegate getSavedPeopleInfo] == array);
 }
 
 @end
