@@ -99,6 +99,20 @@ NSString *mailList;
     }
 }
 
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    // animate the cell user tapped on
+    UICollectionViewCell  *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [cell setBackgroundColor:[UIColor grayColor]];
+    return true;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    // animate the cell user tapped on
+    UICollectionViewCell  *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [cell setBackgroundColor:[UIColor colorWithWhite:0.35 alpha:1.0]];
+
+}
+
 - (IBAction)signOut:(id)sender {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"https://my.thoughtworks.com/api/core/v2/authentication/login"]];
     [request setHTTPMethod:@"DELETE"];
