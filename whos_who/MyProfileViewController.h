@@ -17,5 +17,6 @@
 @property (weak, nonatomic) NSString *url;
 - (IBAction)signOut:(id)sender;
 - (IBAction)addToContacts:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

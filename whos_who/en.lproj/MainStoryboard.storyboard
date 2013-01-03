@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="92q-z7-oXB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="92q-z7-oXB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
@@ -118,6 +118,7 @@
                         <outlet property="lblName" destination="lsd-sV-7rC" id="eiu-zh-wH7"/>
                         <outlet property="lblRole" destination="5wE-zq-knR" id="UOL-l7-enf"/>
                         <outlet property="phone" destination="ggH-Hn-Otf" id="5yi-v9-YGE"/>
+                        <outlet property="saveButton" destination="vsf-Yv-0tW" id="Uut-mN-vjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -282,7 +283,7 @@
         <scene sceneID="0HF-yC-WfG">
             <objects>
                 <navigationController definesPresentationContext="YES" id="cIr-hJ-1bv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Saved Info" image="first" id="oP8-6c-IIh"/>
+                    <tabBarItem key="tabBarItem" title="Saved Info" image="saved info icon.png" id="oP8-6c-IIh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="UcX-Wd-tdL">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -455,7 +456,7 @@
         <scene sceneID="Mr3-Pe-5yz">
             <objects>
                 <navigationController definesPresentationContext="YES" id="1vb-sz-lz3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Profile" image="first" id="e2p-Vh-fDT"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="profile.png" id="e2p-Vh-fDT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="8P2-cW-qn2">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -471,7 +472,7 @@
         <scene sceneID="sPA-Iq-ehE">
             <objects>
                 <navigationController definesPresentationContext="YES" id="NzL-z6-isa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" image="first" id="tdu-XR-iBH"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="settings.png" id="tdu-XR-iBH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="fJx-fW-WYQ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -488,6 +489,9 @@
         <image name="first" width="16" height="16"/>
         <image name="mail_icon.png" width="32" height="32"/>
         <image name="phone_icon.png" width="32" height="32"/>
+        <image name="profile.png" width="22" height="24"/>
+        <image name="saved info icon.png" width="22" height="22"/>
+        <image name="settings.png" width="21" height="21"/>
     </resources>
     <classes>
         <class className="KeyPeopleViewCell" superclassName="UICollectionViewCell">
@@ -527,6 +531,7 @@
                 <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblRole" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="phone" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -543,9 +548,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="WhosWhoViewController" superclassName="ZBarReaderViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WhosWhoViewController.h"/>
@@ -566,8 +568,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="41K-9m-KAA"/>
-        <segue reference="s1f-kH-GyG"/>
-        <segue reference="ohF-ic-VhS"/>
+        <segue reference="HRp-YA-R2e"/>
+        <segue reference="lLx-aX-VdW"/>
+        <segue reference="eby-nw-2X7"/>
     </inferredMetricsTieBreakers>
 </document>

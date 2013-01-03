@@ -21,6 +21,7 @@ NSString *username;
 @synthesize phone = _phone;
 @synthesize email = _email;
 @synthesize url = _url;
+@synthesize saveButton;
 
 - (void)viewDidLoad
 {
@@ -28,6 +29,7 @@ NSString *username;
 	// Do any additional setup after loading the view, typically from a nib.
     if(_url == nil) {
         _url = @"https://my.thoughtworks.com/api/core/v2/my";
+        saveButton.hidden = YES;
     }
     NSDictionary *data = [AppDelegate jsonFromUrl:_url];
     if(data != nil) {
