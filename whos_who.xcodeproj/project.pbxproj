@@ -113,7 +113,7 @@
 		F9A19D86164953F7001453B5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F9C113B416396CAC00355835 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F9C113B516396CAC00355835 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		FE96AC0C162D8F1100DA6891 /* whos_who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whos_who.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE96AC0C162D8F1100DA6891 /* Who's who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Who's who.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE96AC10162D8F1100DA6891 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE96AC12162D8F1100DA6891 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE96AC14162D8F1100DA6891 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -259,7 +259,7 @@
 		FE96AC0D162D8F1100DA6891 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE96AC0C162D8F1100DA6891 /* whos_who.app */,
+				FE96AC0C162D8F1100DA6891 /* Who's who.app */,
 				FE96AC3E162D8F1100DA6891 /* whos_whoTests.octest */,
 			);
 			name = Products;
@@ -348,9 +348,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE96AC0B162D8F1100DA6891 /* Who's who */ = {
+		FE96AC0B162D8F1100DA6891 /* whos_who */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE96AC50162D8F1100DA6891 /* Build configuration list for PBXNativeTarget "Who's who" */;
+			buildConfigurationList = FE96AC50162D8F1100DA6891 /* Build configuration list for PBXNativeTarget "whos_who" */;
 			buildPhases = (
 				FE96AC08162D8F1100DA6891 /* Sources */,
 				FE96AC09162D8F1100DA6891 /* Frameworks */,
@@ -360,9 +360,9 @@
 			);
 			dependencies = (
 			);
-			name = "Who's who";
+			name = whos_who;
 			productName = whos_who;
-			productReference = FE96AC0C162D8F1100DA6891 /* whos_who.app */;
+			productReference = FE96AC0C162D8F1100DA6891 /* Who's who.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FE96AC3D162D8F1100DA6891 /* whos_whoTests */ = {
@@ -405,7 +405,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE96AC0B162D8F1100DA6891 /* Who's who */,
+				FE96AC0B162D8F1100DA6891 /* whos_who */,
 				FE96AC3D162D8F1100DA6891 /* whos_whoTests */,
 			);
 		};
@@ -495,7 +495,7 @@
 /* Begin PBXTargetDependency section */
 		F977EE1F168AC22A00BEB866 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE96AC0B162D8F1100DA6891 /* Who's who */;
+			target = FE96AC0B162D8F1100DA6891 /* whos_who */;
 			targetProxy = F977EE1E168AC22A00BEB866 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -592,7 +592,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Who's who";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -607,7 +607,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ZBarSDK\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Who's who";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -615,7 +615,7 @@
 		FE96AC54162D8F1100DA6891 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/whos_who.app/whos_who";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Who's who.app/Who's who";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -670,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE96AC50162D8F1100DA6891 /* Build configuration list for PBXNativeTarget "Who's who" */ = {
+		FE96AC50162D8F1100DA6891 /* Build configuration list for PBXNativeTarget "whos_who" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE96AC51162D8F1100DA6891 /* Debug */,
