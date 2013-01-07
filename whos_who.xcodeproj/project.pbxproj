@@ -463,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$RUN_UNIT_TEST_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\napp_folder=$(dirname \"$TEST_HOST\")\napp_home=$(dirname \"$app_folder\")\nenvironment_args=\"--setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=$test_bundle_path --setenv XCInjectBundleInto=$app_home/*/*\"\napp_folder=$(dirname \"$TEST_HOST\")\necho $environment_args\nsh -c 'ios-sim launch \"$app_folder\" $environment_args --args -SenTest All $test_bundle_path'\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi";
+			shellScript = "if [ \"$RUN_UNIT_TEST_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\napp_folder=$(dirname \"$TEST_HOST\")\napp_home=$(dirname \"$app_folder\")\nenvironment_args=\"--setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=$test_bundle_path --setenv XCInjectBundleInto=$app_home/*/*\"\napp_folder=$(dirname \"$TEST_HOST\")\necho $environment_args\nsh -c \"ios-sim launch \\\"$app_folder\\\" $environment_args --args -SenTest All $test_bundle_path\"\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
