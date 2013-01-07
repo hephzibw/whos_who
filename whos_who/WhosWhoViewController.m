@@ -78,6 +78,9 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"signOut"]) {
+        return;
+    }
     if([[segue identifier] isEqualToString:@"person"]) {
         MyProfileViewController *controller = [segue destinationViewController];
         [controller setUrl:baseUrl];
